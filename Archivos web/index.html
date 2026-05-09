@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HDM Web Design · Webs rápidas para negocios reales | Madrid</title>
-<meta name="description" content="Creamos páginas web profesionales para clínicas, despachos y negocios locales listas para posicionar y captar clientes. Desde 390€. Madrid y toda España.">
+<meta name="description" content="Creamos páginas web profesionales para clínicas, despachos y negocios locales listas para posicionar y captar clientes. Desde 500€. Madrid y toda España.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hdmwebdesign.es/">
 <meta property="og:title" content="HDM Web Design · Webs rápidas para negocios reales">
-<meta property="og:description" content="Páginas web profesionales para negocios locales. Con SEO incluido, desde 390€, listas en 10 días.">
+<meta property="og:description" content="Páginas web profesionales para negocios locales. Con SEO incluido, desde 500€, listas en 10 días.">
 <meta property="og:url" content="https://hdmwebdesign.es/">
 <meta property="og:type" content="website">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
   "@type": "FAQPage",
   "mainEntity": [
     {"@type":"Question","name":"¿El SEO on-page garantiza posiciones en Google?","acceptedAnswer":{"@type":"Answer","text":"No. El SEO on-page es la base técnica obligatoria: estructura, velocidad, metaetiquetas. Las posiciones dependen de la competencia y del tiempo. Lo que hacemos es que tu web arranque correctamente preparada desde el primer día."}},
-    {"@type":"Question","name":"¿Cuánto cuesta una página web profesional con SEO?","acceptedAnswer":{"@type":"Answer","text":"Desde 390€ pago único con SEO on-page incluido. El plan Posicionar cuesta 590€ con 5 páginas, landing de nicho y Analytics. El plan Crecer cuesta 890€ con blog y Google Business Profile."}},
+    {"@type":"Question","name":"¿Cuánto cuesta una página web profesional con SEO?","acceptedAnswer":{"@type":"Answer","text":"Desde 500€ pago único con SEO on-page incluido. El plan Posicionar cuesta 590€ con 5 páginas, landing de nicho y Analytics. El plan Crecer cuesta 890€ con blog y Google Business Profile."}},
     {"@type":"Question","name":"¿En cuánto tiempo se hace una página web profesional?","acceptedAnswer":{"@type":"Answer","text":"En 10 días hábiles desde la aprobación del brief y el diseño. El plan Presencia se entrega en 7 días."}},
     {"@type":"Question","name":"¿Quién paga el hosting y el dominio?","acceptedAnswer":{"@type":"Answer","text":"Tú, directamente al proveedor. El hosting suele costar entre 5 y 15€/mes. No cobramos comisión ni intermediamos. La web es 100% tuya desde el día 1."}}
   ]
@@ -150,12 +150,7 @@ h1{font-size:clamp(2.4rem,4.5vw,4rem);font-weight:800;line-height:1.08;color:var
 .sec-sub{font-size:0.92rem;color:var(--ink2);max-width:520px;line-height:1.75;font-weight:400}
 .sec-link{display:inline-flex;align-items:center;gap:5px;font-size:0.85rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;border-bottom:1px solid rgba(79,70,229,0.2);padding-bottom:1px;white-space:nowrap}
 
-/* ── STATS ── */
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden}
-.stat-card{background:var(--white);padding:2.25rem 2rem;text-align:center;transition:background 0.15s}
-.stat-card:hover{background:var(--bg)}
-.stat-big{font-size:3.25rem;font-weight:800;line-height:1;margin-bottom:0.5rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.stat-label{font-size:0.83rem;color:var(--ink2);line-height:1.45;max-width:150px;margin:0 auto;font-weight:500}
+
 
 /* ── SERVICIOS ── */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem}
@@ -178,6 +173,15 @@ h1{font-size:clamp(2.4rem,4.5vw,4rem);font-weight:800;line-height:1.08;color:var
 .paso-title{font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem}
 .paso-desc{font-size:0.75rem;color:var(--ink2);line-height:1.5;font-weight:400}
 .paso-time{display:inline-block;margin-top:0.875rem;font-size:0.68rem;font-weight:700;background:rgba(79,70,229,0.07);color:var(--blue);padding:0.2rem 0.6rem;border-radius:20px;border:1px solid rgba(79,70,229,0.12)}
+/* Timeline móvil */
+@media(max-width:600px){
+  .proc-steps{display:flex;flex-direction:column;border:none;border-radius:0;gap:0;position:relative}
+  .proc-steps::before{content:'';position:absolute;left:22px;top:0;bottom:0;width:2px;background:var(--grad);opacity:0.3;border-radius:2px}
+  .paso{border-right:none;border-bottom:none;background:transparent;padding:0 0 2rem 3.5rem;position:relative}
+  .paso:last-child{padding-bottom:0}
+  .paso::before{content:attr(data-num);position:absolute;left:0;top:0;width:44px;height:44px;background:var(--grad);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:#fff;z-index:1}
+  .paso-n{display:none}
+}
 
 /* ── DEMOS ── */
 .demos-header{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end;margin-bottom:2.5rem}
@@ -349,7 +353,7 @@ document.addEventListener('click',function(e){
       <ul class="checklist">
         <li>
           <span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          Diseño profesional a medida desde 390€
+          Diseño profesional a medida desde 500€
         </li>
         <li>
           <span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -389,12 +393,12 @@ document.addEventListener('click',function(e){
           <div class="bf-icon bf-p">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
           </div>
-          <div><div class="b-label">Precio cerrado</div><div class="b-val">Desde 390€</div></div>
+          <div><div class="b-label">Precio cerrado</div><div class="b-val">Desde 500€</div></div>
         </div>
       </div>
       <div class="hero-stats">
         <div class="hs"><div class="hs-num">10d</div><div class="hs-label">entrega</div></div>
-        <div class="hs"><div class="hs-num">390€</div><div class="hs-label">desde</div></div>
+        <div class="hs"><div class="hs-num">500€</div><div class="hs-label">desde</div></div>
         <div class="hs"><div class="hs-num">100%</div><div class="hs-label">tuya</div></div>
       </div>
     </div>
@@ -423,29 +427,7 @@ document.addEventListener('click',function(e){
   </div>
 </div>
 
-<!-- STATS -->
-<section class="sec sec-white">
-  <div class="sec-inner" style="padding-top:4rem;padding-bottom:4rem">
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-big">10d</div>
-        <div class="stat-label">Entrega garantizada en 10 días hábiles</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-big">390€</div>
-        <div class="stat-label">Precio de inicio con SEO on-page incluido</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-big">0%</div>
-        <div class="stat-label">Comisión en hosting y dominio. Todo tuyo.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-big">24h</div>
-        <div class="stat-label">Respuesta máxima en días laborables</div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- SERVICIOS -->
 <section class="sec sec-bg">
@@ -519,31 +501,31 @@ document.addEventListener('click',function(e){
       <a href="/proceso" class="sec-link">Ver el proceso completo →</a>
     </div>
     <div class="proc-steps">
-      <div class="paso">
+      <div class="paso" data-num="1">
         <div class="paso-n">Paso 01</div>
         <div class="paso-title">Brief</div>
         <div class="paso-desc">Formulario de 10 min. Sin él no arrancamos.</div>
         <span class="paso-time">Día 1</span>
       </div>
-      <div class="paso">
+      <div class="paso" data-num="2">
         <div class="paso-n">Paso 02</div>
         <div class="paso-title">Diseño</div>
         <div class="paso-desc">Propuesta visual para tu aprobación.</div>
         <span class="paso-time">Días 2–3</span>
       </div>
-      <div class="paso">
+      <div class="paso" data-num="3">
         <div class="paso-n">Paso 03</div>
         <div class="paso-title">Desarrollo + SEO</div>
         <div class="paso-desc">Maquetación con SEO técnico incluido.</div>
         <span class="paso-time">Días 4–8</span>
       </div>
-      <div class="paso">
+      <div class="paso" data-num="4">
         <div class="paso-n">Paso 04</div>
         <div class="paso-title">Revisión</div>
         <div class="paso-desc">2 rondas incluidas. 48h para responder.</div>
         <span class="paso-time">Día 9</span>
       </div>
-      <div class="paso">
+      <div class="paso" data-num="5">
         <div class="paso-n">Paso 05</div>
         <div class="paso-title">Publicación</div>
         <div class="paso-desc">Online en tu dominio. Sin comisiones.</div>
@@ -656,7 +638,7 @@ document.addEventListener('click',function(e){
     <div class="precios-grid">
       <div class="plan">
         <div class="plan-tag">Presencia básica</div>
-        <div class="plan-price lg">390€</div>
+        <div class="plan-price lg">500€</div>
         <div class="plan-period">pago único</div>
         <div class="plan-name">Presencia</div>
         <div class="plan-desc">3 páginas, SEO básico, responsive. Entrega en 7 días.</div>
@@ -665,7 +647,7 @@ document.addEventListener('click',function(e){
       <div class="plan featured">
         <div class="pop-pin">Más popular</div>
         <div class="plan-tag">Para posicionar</div>
-        <div class="plan-price lg">590€</div>
+        <div class="plan-price lg">700€</div>
         <div class="plan-period">pago único</div>
         <div class="plan-name">Posicionar</div>
         <div class="plan-desc">5 páginas, landing de nicho, Analytics y Search Console.</div>
@@ -673,7 +655,7 @@ document.addEventListener('click',function(e){
       </div>
       <div class="plan">
         <div class="plan-tag">Para crecer</div>
-        <div class="plan-price lg">890€</div>
+        <div class="plan-price lg">1.000€</div>
         <div class="plan-period">pago único</div>
         <div class="plan-name">Crecer</div>
         <div class="plan-desc">3 landings de nicho, blog, Google Business Profile.</div>
@@ -709,7 +691,7 @@ document.addEventListener('click',function(e){
       </div>
       <div class="fq">
         <div class="fq-q">¿Cuánto cuesta una página web profesional con SEO incluido?</div>
-        <div class="fq-a">Desde <strong>390€ pago único</strong> con SEO on-page incluido. El plan Posicionar cuesta 590€ e incluye 5 páginas, landing de nicho y Analytics. El plan Crecer cuesta 890€ con blog y Google Business Profile. <a href="/precios">Ver todos los planes →</a></div>
+        <div class="fq-a">Desde <strong>500€ pago único</strong> con SEO on-page incluido. El plan Posicionar cuesta 700€ e incluye 5 páginas, landing de nicho y Analytics. El plan Crecer cuesta 1.000€ con blog y Google Business Profile. <a href="/precios">Ver todos los planes →</a></div>
       </div>
       <div class="fq">
         <div class="fq-q">¿En cuánto tiempo se entrega una página web profesional?</div>
