@@ -144,7 +144,7 @@ h1{font-size:clamp(2.4rem,4.5vw,4rem);font-weight:800;line-height:1.08;color:var
 .badge-float:nth-child(2){animation-delay:0.6s}
 .badge-float:nth-child(3){animation-delay:1.2s}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.bf-1{top:8%;left:-13%}.bf-2{top:47%;right:-11%}.bf-3{bottom:10%;left:-11%}
+.bf-1{top:8%;left:5%}.bf-2{bottom:30%;right:5%}.bf-3{bottom:8%;left:5%}
 .bf-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
 .bf-g{background:#f0fdf4}.bf-b{background:#eff4ff}.bf-p{background:#faf5ff}
 .b-label{font-size:0.62rem;color:var(--ink3);font-weight:500;line-height:1.2}
@@ -188,24 +188,32 @@ h1{font-size:clamp(2.4rem,4.5vw,4rem);font-weight:800;line-height:1.08;color:var
 .svc-desc{font-size:0.82rem;color:var(--ink2);line-height:1.65;flex:1;margin-bottom:1.25rem;font-weight:400}
 .svc-link{font-size:0.78rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-flex;align-items:center;gap:4px}
 
-/* ── PROCESO ── */
-.proc-header{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end;margin-bottom:3rem}
-.proc-steps{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--border);border-radius:16px;overflow:hidden}
-.paso{padding:1.75rem 1.5rem;border-right:1px solid var(--border);background:var(--bg);transition:background 0.15s}
-.paso:last-child{border-right:none}
-.paso:hover{background:var(--white)}
-.paso-n{font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.875rem}
-.paso-title{font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem}
-.paso-desc{font-size:0.75rem;color:var(--ink2);line-height:1.5;font-weight:400}
-.paso-time{display:inline-block;margin-top:0.875rem;font-size:0.68rem;font-weight:700;background:rgba(79,70,229,0.07);color:var(--blue);padding:0.2rem 0.6rem;border-radius:20px;border:1px solid rgba(79,70,229,0.12)}
+/* ── PROCESO INFOGRÁFICO ── */
+.proc-header{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end;margin-bottom:3.5rem}
+.proc-flow{display:grid;grid-template-columns:repeat(5,1fr) ;align-items:start;position:relative;gap:0}
+.proc-flow::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,#4F46E5,#7C3AED,#DB2777);opacity:0.25;z-index:0}
+.pf-step{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding:0 0.5rem}
+.pf-circle{width:56px;height:56px;border-radius:50%;background:var(--white);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;position:relative;transition:all 0.2s;flex-shrink:0}
+.pf-circle::after{content:'';position:absolute;inset:-4px;border-radius:50%;background:var(--grad);opacity:0;transition:opacity 0.2s;z-index:-1}
+.pf-step:hover .pf-circle{border-color:transparent;box-shadow:0 0 0 2px white}
+.pf-step:hover .pf-circle::after{opacity:1}
+.pf-num{font-size:1.1rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.pf-step:hover .pf-num{-webkit-text-fill-color:#fff}
+.pf-arrow{position:absolute;top:26px;right:-18px;z-index:2;color:var(--border2)}
+.pf-step:last-child .pf-arrow{display:none}
+.pf-day{font-size:0.65rem;font-weight:700;background:rgba(79,70,229,0.07);color:var(--blue);padding:0.18rem 0.55rem;border-radius:20px;border:1px solid rgba(79,70,229,0.12);margin-bottom:0.6rem;display:inline-block}
+.pf-title{font-size:0.92rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem}
+.pf-desc{font-size:0.75rem;color:var(--ink2);line-height:1.5;font-weight:400}
+
 /* Timeline móvil */
-@media(max-width:600px){
-  .proc-steps{display:flex;flex-direction:column;border:none;border-radius:0;gap:0;position:relative}
-  .proc-steps::before{content:'';position:absolute;left:22px;top:0;bottom:0;width:2px;background:var(--grad);opacity:0.3;border-radius:2px}
-  .paso{border-right:none;border-bottom:none;background:transparent;padding:0 0 2rem 3.5rem;position:relative}
-  .paso:last-child{padding-bottom:0}
-  .paso::before{content:attr(data-num);position:absolute;left:0;top:0;width:44px;height:44px;background:var(--grad);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:#fff;z-index:1}
-  .paso-n{display:none}
+@media(max-width:700px){
+  .proc-flow{grid-template-columns:1fr;gap:0;padding-left:2.5rem}
+  .proc-flow::before{top:0;bottom:0;left:27px;right:auto;width:2px;height:auto;background:linear-gradient(180deg,#4F46E5,#7C3AED,#DB2777)}
+  .pf-step{flex-direction:row;text-align:left;align-items:flex-start;gap:1.25rem;padding:0 0 2rem 0}
+  .pf-step:last-child{padding-bottom:0}
+  .pf-circle{flex-shrink:0;margin-bottom:0}
+  .pf-arrow{display:none}
+  .pf-content{display:flex;flex-direction:column}
 }
 
 /* ── DEMOS ── */
@@ -549,36 +557,60 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()}
       </div>
       <a href="/proceso" class="sec-link">Ver el proceso completo →</a>
     </div>
-    <div class="proc-steps">
-      <div class="paso" data-num="1">
-        <div class="paso-n">Paso 01</div>
-        <div class="paso-title">Brief</div>
-        <div class="paso-desc">Formulario de 10 min. Sin él no arrancamos.</div>
-        <span class="paso-time">Día 1</span>
+    <div class="proc-flow">
+      <div class="pf-step">
+        <div class="pf-circle">
+          <span class="pf-num">01</span>
+          <svg class="pf-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pf-content">
+          <span class="pf-day">Día 1</span>
+          <div class="pf-title">Brief</div>
+          <div class="pf-desc">Cuéntanos tu negocio, tus clientes y tus objetivos. Sin este paso no arrancamos.</div>
+        </div>
       </div>
-      <div class="paso" data-num="2">
-        <div class="paso-n">Paso 02</div>
-        <div class="paso-title">Diseño</div>
-        <div class="paso-desc">Propuesta visual para tu aprobación.</div>
-        <span class="paso-time">Días 2–3</span>
+      <div class="pf-step">
+        <div class="pf-circle">
+          <span class="pf-num">02</span>
+          <svg class="pf-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pf-content">
+          <span class="pf-day">Días 2–3</span>
+          <div class="pf-title">Diseño</div>
+          <div class="pf-desc">Propuesta visual para tu aprobación. Sin luz verde no hay desarrollo.</div>
+        </div>
       </div>
-      <div class="paso" data-num="3">
-        <div class="paso-n">Paso 03</div>
-        <div class="paso-title">Desarrollo + SEO</div>
-        <div class="paso-desc">Maquetación con SEO técnico incluido.</div>
-        <span class="paso-time">Días 4–8</span>
+      <div class="pf-step">
+        <div class="pf-circle">
+          <span class="pf-num">03</span>
+          <svg class="pf-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pf-content">
+          <span class="pf-day">Días 4–8</span>
+          <div class="pf-title">Desarrollo + SEO</div>
+          <div class="pf-desc">Maquetamos con SEO técnico incluido desde el código.</div>
+        </div>
       </div>
-      <div class="paso" data-num="4">
-        <div class="paso-n">Paso 04</div>
-        <div class="paso-title">Revisión</div>
-        <div class="paso-desc">2 rondas incluidas. 48h para responder.</div>
-        <span class="paso-time">Día 9</span>
+      <div class="pf-step">
+        <div class="pf-circle">
+          <span class="pf-num">04</span>
+          <svg class="pf-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pf-content">
+          <span class="pf-day">Día 9</span>
+          <div class="pf-title">Revisión</div>
+          <div class="pf-desc">Acceso antes de publicar. 2 rondas incluidas. 48h para responder.</div>
+        </div>
       </div>
-      <div class="paso" data-num="5">
-        <div class="paso-n">Paso 05</div>
-        <div class="paso-title">Publicación</div>
-        <div class="paso-desc">Online en tu dominio. Sin comisiones.</div>
-        <span class="paso-time">Día 10</span>
+      <div class="pf-step">
+        <div class="pf-circle">
+          <span class="pf-num">05</span>
+        </div>
+        <div class="pf-content">
+          <span class="pf-day">Día 10</span>
+          <div class="pf-title">Publicación</div>
+          <div class="pf-desc">Online en tu dominio. Sin comisiones. La web es 100% tuya.</div>
+        </div>
       </div>
     </div>
   </div>
