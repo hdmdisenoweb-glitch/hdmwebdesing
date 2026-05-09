@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HDM Web Design · Webs rápidas para negocios reales | Madrid</title>
+<meta name="description" content="Creamos páginas web profesionales para clínicas, despachos y negocios locales listas para posicionar y captar clientes. Desde 390€. Madrid y toda España.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hdmwebdesign.es/">
+<meta property="og:title" content="HDM Web Design · Webs rápidas para negocios reales">
+<meta property="og:description" content="Páginas web profesionales para negocios locales. Con SEO incluido, desde 390€, listas en 10 días.">
+<meta property="og:url" content="https://hdmwebdesign.es/">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "HDM Web Design",
+  "url": "https://hdmwebdesign.es",
+  "description": "Webs rápidas para negocios reales. Diseño web profesional con SEO incluido para clínicas, despachos y negocios locales.",
+  "founder": {"@type": "Person", "name": "Guillermo Hurtado de Mendoza"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES"},
+  "telephone": "+34657388893",
+  "email": "hdmdisenoweb@gmail.com",
+  "priceRange": "€€",
+  "areaServed": "España"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿El SEO on-page garantiza posiciones en Google?","acceptedAnswer":{"@type":"Answer","text":"No. El SEO on-page es la base técnica obligatoria: estructura, velocidad, metaetiquetas. Las posiciones dependen de la competencia y del tiempo. Lo que hacemos es que tu web arranque correctamente preparada desde el primer día."}},
+    {"@type":"Question","name":"¿Cuánto cuesta una página web profesional con SEO?","acceptedAnswer":{"@type":"Answer","text":"Desde 390€ pago único con SEO on-page incluido. El plan Posicionar cuesta 590€ con 5 páginas, landing de nicho y Analytics. El plan Crecer cuesta 890€ con blog y Google Business Profile."}},
+    {"@type":"Question","name":"¿En cuánto tiempo se hace una página web profesional?","acceptedAnswer":{"@type":"Answer","text":"En 10 días hábiles desde la aprobación del brief y el diseño. El plan Presencia se entrega en 7 días."}},
+    {"@type":"Question","name":"¿Quién paga el hosting y el dominio?","acceptedAnswer":{"@type":"Answer","text":"Tú, directamente al proveedor. El hosting suele costar entre 5 y 15€/mes. No cobramos comisión ni intermediamos. La web es 100% tuya desde el día 1."}}
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --grad:linear-gradient(135deg,#4F46E5 0%,#7C3AED 45%,#DB2777 100%);
+  --grad-soft:linear-gradient(135deg,rgba(79,70,229,0.07) 0%,rgba(219,39,119,0.07) 100%);
+  --blue:#4F46E5;
+  --violet:#7C3AED;
+  --magenta:#DB2777;
+  --navy:#0B1020;
+  --ink:#0B1020;
+  --ink2:#3d3d55;
+  --ink3:#8a8a9a;
+  --bg:#F7F7FA;
+  --bg2:#EFEFF4;
+  --white:#ffffff;
+  --border:#E2E2EC;
+  --border2:#C8C8D8;
+  --green:#22c55e;
+  --num-deco:rgba(219,39,119,0.09);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none}
+.g{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,247,250,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:68px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:38px;height:38px;background:var(--grad);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.75rem;color:#fff;flex-shrink:0;letter-spacing:0.02em}
+.logo-name{font-weight:800;font-size:0.95rem;color:var(--ink)}
+.logo-sub{font-size:0.6rem;color:var(--ink3);font-weight:500;display:block;margin-top:1px}
+.nav-center{flex:1;display:flex;justify-content:center}
+.nav-pill{background:var(--grad);color:#fff;font-weight:700;font-size:0.78rem;letter-spacing:0.03em;text-transform:uppercase;padding:0.55rem 1.6rem;border-radius:30px;transition:opacity 0.15s,transform 0.15s;display:inline-flex;align-items:center;gap:6px}
+.nav-pill:hover{opacity:0.88;transform:translateY(-1px)}
+.nav-right{display:flex;align-items:center;gap:0.25rem}
+.nl{color:var(--ink3);font-size:0.82rem;font-weight:500;padding:0.35rem 0.65rem;border-radius:6px;transition:color 0.15s}
+.nl:hover{color:var(--ink)}
+.nav-menu{width:42px;height:42px;background:var(--grad);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;flex-shrink:0;transition:opacity 0.15s;margin-left:0.25rem}
+.nav-menu:hover{opacity:0.85}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px}
+.mobile-nav{display:none;position:fixed;inset:0;top:68px;background:rgba(247,247,250,0.98);backdrop-filter:blur(14px);z-index:99;flex-direction:column;padding:2rem 1.5rem;border-top:1px solid var(--border)}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-size:1.05rem;font-weight:700;color:var(--ink);padding:0.9rem 0;border-bottom:1px solid var(--border);display:block}
+.mobile-nav a:last-child{border-bottom:none;margin-top:0.875rem;background:var(--grad);color:#fff;text-align:center;padding:0.9rem;border-radius:30px;letter-spacing:0.03em;text-transform:uppercase;font-size:0.85rem}
+@media(max-width:1024px){.nav-center{display:none}}
+@media(max-width:900px){.nav-right .nl{display:none}.nav-menu{display:none}.hamburger{display:flex}}
+
+/* ── HERO ── */
+.hero{padding:7.5rem 0 5rem;position:relative;overflow:hidden;background:var(--bg)}
+.hero-blob{position:absolute;top:-15%;right:-8%;width:55vw;height:55vw;background:radial-gradient(circle,rgba(79,70,229,0.09) 0%,transparent 65%);border-radius:50%;pointer-events:none}
+.hero-blob2{position:absolute;bottom:-10%;left:-5%;width:35vw;height:35vw;background:radial-gradient(circle,rgba(219,39,119,0.06) 0%,transparent 65%);border-radius:50%;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.hero-line{position:absolute;left:2.5rem;top:0;bottom:0;width:3px;background:var(--grad);border-radius:3px;opacity:0.45}
+.deco-num{font-size:11rem;font-weight:800;color:var(--num-deco);line-height:0.85;position:absolute;top:-1.5rem;left:-1rem;z-index:0;pointer-events:none;letter-spacing:-0.06em;user-select:none}
+.hero-content{position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;background:var(--white);border:1px solid var(--border);padding:0.3rem 0.875rem;border-radius:20px;font-size:0.75rem;color:var(--ink3);margin-bottom:1.75rem;box-shadow:0 1px 4px rgba(0,0,0,0.05);font-weight:500}
+.live{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+h1{font-size:clamp(2.4rem,4.5vw,4rem);font-weight:800;line-height:1.08;color:var(--ink);margin-bottom:1.25rem}
+.hero-sub{font-size:1rem;color:var(--ink2);line-height:1.75;max-width:440px;margin-bottom:2rem;font-weight:400}
+.hero-sub strong{color:var(--ink);font-weight:600}
+.checklist{list-style:none;display:flex;flex-direction:column;gap:0.7rem;margin-bottom:2.25rem}
+.checklist li{display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--ink2);font-weight:500}
+.chk{width:20px;height:20px;min-width:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px;flex-shrink:0}
+.chk svg{display:block}
+.hero-actions{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.btn-grad{background:var(--grad);color:#fff;padding:0.875rem 2rem;border-radius:30px;font-size:0.9rem;font-weight:700;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(79,70,229,0.25)}
+.btn-grad:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(79,70,229,0.35)}
+.btn-soft{color:var(--ink2);font-size:0.875rem;display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--border2);padding:0.875rem 1.5rem;border-radius:30px;transition:all 0.15s;font-weight:600}
+.btn-soft:hover{border-color:var(--blue);color:var(--blue)}
+
+/* Hero right */
+.hero-right{position:relative}
+.hero-img-wrap{border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(11,16,32,0.1);position:relative}
+.hero-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.badge-float{position:absolute;background:var(--white);border-radius:12px;padding:0.6rem 0.875rem;box-shadow:0 8px 24px rgba(11,16,32,0.1);display:flex;align-items:center;gap:8px;animation:float 3s ease-in-out infinite}
+.badge-float:nth-child(2){animation-delay:0.6s}
+.badge-float:nth-child(3){animation-delay:1.2s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.bf-1{top:8%;left:-13%}.bf-2{top:47%;right:-11%}.bf-3{bottom:10%;left:-11%}
+.bf-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.bf-g{background:#f0fdf4}.bf-b{background:#eff4ff}.bf-p{background:#faf5ff}
+.b-label{font-size:0.62rem;color:var(--ink3);font-weight:500;line-height:1.2}
+.b-val{font-size:0.8rem;font-weight:700;color:var(--ink);line-height:1.2}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:12px;overflow:hidden;margin-top:1rem}
+.hs{background:var(--white);padding:1rem 1.25rem;text-align:center}
+.hs-num{font-size:1.5rem;font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hs-label{font-size:0.68rem;color:var(--ink3);margin-top:2px;font-weight:500}
+
+/* ── MARQUEE ── */
+.marquee-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0.875rem 0;overflow:hidden;white-space:nowrap;background:var(--white)}
+.marquee-track{display:inline-flex;animation:marquee 28s linear infinite}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mi{font-size:0.73rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink3);padding:0 2rem}
+.mi.a{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ── SECTIONS ── */
+.sec{border-top:1px solid var(--border)}
+.sec-bg{background:var(--bg)}
+.sec-white{background:var(--white)}
+.sec-inner{max-width:1200px;margin:0 auto;padding:5.5rem 2.5rem;position:relative}
+.sec-inner::before{content:'';position:absolute;left:0;top:4rem;bottom:4rem;width:3px;background:var(--grad);border-radius:3px;opacity:0.35}
+.sec-deco{font-size:7rem;font-weight:800;color:var(--num-deco);line-height:1;position:absolute;top:2.5rem;left:1.5rem;pointer-events:none;user-select:none;letter-spacing:-0.06em}
+.sec-label{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.875rem;display:flex;align-items:center;gap:8px}
+.sl-line{width:20px;height:2px;background:var(--grad);border-radius:2px;flex-shrink:0}
+.sl-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-title{font-size:clamp(1.9rem,3.5vw,3rem);font-weight:800;line-height:1.05;color:var(--ink);margin-bottom:0.875rem}
+.sec-sub{font-size:0.92rem;color:var(--ink2);max-width:520px;line-height:1.75;font-weight:400}
+.sec-link{display:inline-flex;align-items:center;gap:5px;font-size:0.85rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;border-bottom:1px solid rgba(79,70,229,0.2);padding-bottom:1px;white-space:nowrap}
+
+/* ── STATS ── */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden}
+.stat-card{background:var(--white);padding:2.25rem 2rem;text-align:center;transition:background 0.15s}
+.stat-card:hover{background:var(--bg)}
+.stat-big{font-size:3.25rem;font-weight:800;line-height:1;margin-bottom:0.5rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:0.83rem;color:var(--ink2);line-height:1.45;max-width:150px;margin:0 auto;font-weight:500}
+
+/* ── SERVICIOS ── */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem}
+.svc{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all 0.2s;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.svc:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(11,16,32,0.07);border-color:transparent}
+.svc:hover::before{transform:scaleX(1)}
+.svc-icon{width:44px;height:44px;background:linear-gradient(135deg,rgba(79,70,229,0.08),rgba(219,39,119,0.08));border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;border:1px solid rgba(79,70,229,0.12);color:var(--blue);flex-shrink:0}
+.svc-title{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem}
+.svc-desc{font-size:0.82rem;color:var(--ink2);line-height:1.65;flex:1;margin-bottom:1.25rem;font-weight:400}
+.svc-link{font-size:0.78rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-flex;align-items:center;gap:4px}
+
+/* ── PROCESO ── */
+.proc-header{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end;margin-bottom:3rem}
+.proc-steps{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.paso{padding:1.75rem 1.5rem;border-right:1px solid var(--border);background:var(--bg);transition:background 0.15s}
+.paso:last-child{border-right:none}
+.paso:hover{background:var(--white)}
+.paso-n{font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.875rem}
+.paso-title{font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem}
+.paso-desc{font-size:0.75rem;color:var(--ink2);line-height:1.5;font-weight:400}
+.paso-time{display:inline-block;margin-top:0.875rem;font-size:0.68rem;font-weight:700;background:rgba(79,70,229,0.07);color:var(--blue);padding:0.2rem 0.6rem;border-radius:20px;border:1px solid rgba(79,70,229,0.12)}
+
+/* ── DEMOS ── */
+.demos-header{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.demos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.875rem}
+.demo-card{border-radius:14px;overflow:hidden;position:relative;aspect-ratio:16/10;cursor:pointer;box-shadow:0 4px 16px rgba(11,16,32,0.07);transition:transform 0.3s,box-shadow 0.3s}
+.demo-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,16,32,0.12)}
+.demo-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.82);transition:transform 0.5s,filter 0.3s}
+.demo-card:hover .demo-img{transform:scale(1.04);filter:brightness(0.5)}
+.demo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,16,32,0.82) 0%,rgba(11,16,32,0.05) 60%,transparent 100%)}
+.demo-info{position:absolute;bottom:0;left:0;right:0;padding:1.1rem}
+.di-sector{font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.25rem}
+.di-title{font-size:0.9rem;font-weight:700;color:#fff;margin-bottom:0.6rem;line-height:1.2}
+.di-links{display:flex;gap:0.4rem;opacity:0;transform:translateY(5px);transition:all 0.25s}
+.demo-card:hover .di-links{opacity:1;transform:translateY(0)}
+.di-btn{font-size:0.7rem;font-weight:700;padding:0.3rem 0.7rem;border-radius:20px}
+.di-p{background:var(--grad);color:#fff}
+.di-g{background:rgba(255,255,255,0.18);color:#fff;backdrop-filter:blur(4px)}
+.di-g:hover{background:rgba(255,255,255,0.28)}
+.real-pin{position:absolute;top:10px;right:10px;background:var(--green);color:#fff;font-size:0.6rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.18rem 0.55rem;border-radius:20px;z-index:2}
+
+/* ── PRECIOS ── */
+.precios-header{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end;margin-bottom:3rem}
+.precios-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.875rem}
+.plan{padding:2rem 1.75rem;background:var(--white);border-radius:16px;border:1px solid var(--border);display:flex;flex-direction:column;transition:all 0.2s;position:relative}
+.plan:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(11,16,32,0.07)}
+.plan.featured{background:var(--grad);border:none;box-shadow:0 8px 32px rgba(79,70,229,0.28)}
+.plan.featured:hover{box-shadow:0 16px 48px rgba(79,70,229,0.38)}
+.plan.navy{background:var(--navy);color:#fff;border:none}
+.pop-pin{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-size:0.6rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.22rem 0.8rem;border-radius:20px;white-space:nowrap}
+.plan-tag{font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.25rem;opacity:0.45}
+.plan-price{font-weight:800;line-height:1;margin-bottom:2px}
+.plan-price.lg{font-size:2.75rem}
+.plan-price.md{font-size:1.9rem}
+.plan:not(.featured):not(.navy) .plan-price{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.plan.featured .plan-price,.plan.navy .plan-price{color:#fff}
+.plan-period{font-size:0.7rem;margin-bottom:1.25rem;opacity:0.4;font-weight:500}
+.plan-name{font-size:0.95rem;font-weight:700;margin-bottom:0.35rem}
+.plan:not(.featured):not(.navy) .plan-name{color:var(--ink)}
+.plan.featured .plan-name,.plan.navy .plan-name{color:#fff}
+.plan-desc{font-size:0.76rem;line-height:1.55;margin-bottom:1.25rem;flex:1;opacity:0.55;font-weight:400}
+.plan-btn{display:block;text-align:center;padding:0.7rem;border-radius:30px;font-size:0.82rem;font-weight:700;transition:all 0.15s;margin-top:auto}
+.pb-grad{background:var(--grad);color:#fff}
+.pb-grad:hover{opacity:0.9}
+.pb-white{background:#fff;color:var(--blue)}
+.pb-white:hover{background:rgba(255,255,255,0.92)}
+.pb-out{border:1.5px solid var(--border2);color:var(--ink)}
+.pb-out:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pb-navy{background:rgba(79,70,229,0.15);color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.12)}
+.pb-navy:hover{background:rgba(79,70,229,0.3)}
+
+/* ── FAQ ── */
+.faq-header{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.faq-list{display:flex;flex-direction:column}
+.fq{border-top:1px solid var(--border);padding:1.4rem 0}
+.fq:last-child{border-bottom:1px solid var(--border)}
+.fq-q{font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.6rem}
+.fq-a{font-size:0.83rem;color:var(--ink2);line-height:1.7;max-width:760px;font-weight:400}
+.fq-a strong{color:var(--ink);font-weight:600}
+.fq-a a{color:var(--blue);font-weight:600}
+
+/* ── CTA FINAL ── */
+.cta-final{padding:6rem 2.5rem;text-align:center;background:var(--white);border-top:1px solid var(--border);position:relative;overflow:hidden}
+.cta-final::before{content:'';position:absolute;inset:0;background:var(--grad-soft);pointer-events:none}
+.cta-wrap{max-width:760px;margin:0 auto;position:relative;z-index:1}
+.cta-final h2{font-size:clamp(2.25rem,5vw,4.25rem);font-weight:800;line-height:1.02;color:var(--ink);margin-bottom:0.5rem}
+.cta-sub{font-size:0.97rem;color:var(--ink2);margin:1rem 0 2.5rem;font-weight:400}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:1rem 2.25rem;border-radius:30px;font-size:0.9rem;font-weight:700;transition:all 0.15s;box-shadow:0 6px 24px rgba(79,70,229,0.25)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(79,70,229,0.35)}
+.btn-em{color:var(--ink3);font-size:0.875rem;transition:color 0.15s;border-bottom:1px solid var(--border);padding-bottom:2px;font-weight:500}
+.btn-em:hover{color:var(--blue)}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-weight:700;font-size:0.9rem;color:#fff}
+.fl{display:flex;gap:1.75rem;font-size:0.78rem;flex-wrap:wrap}
+.fl a{color:rgba(255,255,255,0.38);transition:color 0.15s;font-weight:500}
+.fl a:hover{color:rgba(255,255,255,0.75)}
+.fc{font-size:0.72rem;color:rgba(255,255,255,0.22)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .proc-steps{grid-template-columns:1fr 1fr}
+  .paso{border-right:none;border-bottom:1px solid var(--border)}
+  .paso:last-child{border-bottom:none}
+  .precios-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  nav{padding:0 1.5rem}
+  .hero-inner{grid-template-columns:1fr;padding:0 1.5rem;gap:3rem}
+  .hero-line{display:none}
+  .deco-num{font-size:7rem}
+  .bf-1,.bf-2,.bf-3{display:none}
+  .proc-header,.demos-header,.precios-header,.faq-header{grid-template-columns:1fr;gap:1.25rem}
+  .sec-inner{padding:4rem 1.5rem}
+  .sec-deco{display:none}
+  .demos-grid{grid-template-columns:1fr 1fr}
+  .cta-final{padding:4rem 1.5rem}
+  footer{flex-direction:column;text-align:center;padding:1.5rem}
+  .fl{justify-content:center}
+}
+@media(max-width:600px){
+  .demos-grid,.precios-grid,.stats-grid,.services-grid{grid-template-columns:1fr}
+  .proc-steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-icon">HDM</div>
+    <div>
+      <span class="logo-name">HDM Web Design</span>
+      <span class="logo-sub">Diseño web · Madrid</span>
+    </div>
+  </a>
+  <div class="nav-center">
+    <a href="/contacto" class="nav-pill">¿Digitalizamos tu negocio? Empieza ahora →</a>
+  </div>
+  <div class="nav-right">
+    <a href="/demos" class="nl">Demos</a>
+    <a href="/proceso" class="nl">Proceso</a>
+    <a href="/precios" class="nl">Precios</a>
+    <a href="/blog" class="nl">Blog</a>
+    <a href="/sobre-mi" class="nl">Sobre mí</a>
+    <button class="nav-menu" id="hbg" aria-label="Menú">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <rect x="2" y="3" width="14" height="2" rx="1" fill="white"/>
+        <rect x="2" y="8" width="14" height="2" rx="1" fill="white"/>
+        <rect x="2" y="13" width="14" height="2" rx="1" fill="white"/>
+      </svg>
+    </button>
+  </div>
+  <button class="hamburger" id="hbg2" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mnav">
+  <a href="/demos">Demos</a>
+  <a href="/proceso">Proceso</a>
+  <a href="/precios">Precios</a>
+  <a href="/blog">Blog</a>
+  <a href="/sobre-mi">Sobre mí</a>
+  <a href="/contacto">Empieza ahora →</a>
+</div>
+<script>
+function toggleMenu(){document.getElementById('mnav').classList.toggle('open')}
+document.getElementById('hbg').addEventListener('click',toggleMenu);
+document.getElementById('hbg2').addEventListener('click',toggleMenu);
+document.addEventListener('click',function(e){
+  var n=document.getElementById('mnav'),b1=document.getElementById('hbg'),b2=document.getElementById('hbg2');
+  if(!b1.contains(e.target)&&!b2.contains(e.target)&&!n.contains(e.target))n.classList.remove('open');
+});
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-blob"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-inner">
+    <div class="hero-line"></div>
+    <div class="hero-content">
+      <div class="deco-num">01</div>
+      <div class="hero-tag"><span class="live"></span>Madrid · España · Disponible ahora</div>
+      <h1>Webs rápidas para<br><span class="g">negocios reales.</span></h1>
+      <p class="hero-sub">Creamos páginas web profesionales para <strong>clínicas, despachos y negocios locales</strong> listas para posicionar y captar clientes.</p>
+      <ul class="checklist">
+        <li>
+          <span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Diseño profesional a medida desde 390€
+        </li>
+        <li>
+          <span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          SEO on-page incluido para aparecer en Google
+        </li>
+        <li>
+          <span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Lista en 10 días · Precio cerrado · 100% tuya
+        </li>
+      </ul>
+      <div class="hero-actions">
+        <a href="/contacto" class="btn-grad">Solicitar presupuesto →</a>
+        <a href="/demos" class="btn-soft">Ver ejemplos ↓</a>
+      </div>
+    </div>
+
+    <!-- IMAGEN HERO -->
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <!-- Empresaria en su negocio - representa "negocios reales" -->
+        <img class="hero-img"
+          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=85&auto=format&fit=crop"
+          alt="Negocio real con presencia digital profesional - HDM Web Design">
+        <div class="badge-float bf-1">
+          <div class="bf-icon bf-g">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <div><div class="b-label">Web publicada</div><div class="b-val">En 10 días</div></div>
+        </div>
+        <div class="badge-float bf-2">
+          <div class="bf-icon bf-b">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div><div class="b-label">SEO on-page</div><div class="b-val">Incluido</div></div>
+        </div>
+        <div class="badge-float bf-3">
+          <div class="bf-icon bf-p">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          </div>
+          <div><div class="b-label">Precio cerrado</div><div class="b-val">Desde 390€</div></div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hs"><div class="hs-num">10d</div><div class="hs-label">entrega</div></div>
+        <div class="hs"><div class="hs-num">390€</div><div class="hs-label">desde</div></div>
+        <div class="hs"><div class="hs-num">100%</div><div class="hs-label">tuya</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="mi">Webs para negocios reales</span><span class="mi a">·</span>
+    <span class="mi">SEO on-page incluido</span><span class="mi a">·</span>
+    <span class="mi">Entrega en 10 días</span><span class="mi a">·</span>
+    <span class="mi">Precio cerrado</span><span class="mi a">·</span>
+    <span class="mi">Clínicas · Despachos · Negocios locales</span><span class="mi a">·</span>
+    <span class="mi">Sin complicaciones técnicas</span><span class="mi a">·</span>
+    <span class="mi">Madrid y toda España</span><span class="mi a">·</span>
+    <span class="mi">Presencia digital profesional</span><span class="mi a">·</span>
+    <span class="mi">Webs para negocios reales</span><span class="mi a">·</span>
+    <span class="mi">SEO on-page incluido</span><span class="mi a">·</span>
+    <span class="mi">Entrega en 10 días</span><span class="mi a">·</span>
+    <span class="mi">Precio cerrado</span><span class="mi a">·</span>
+    <span class="mi">Clínicas · Despachos · Negocios locales</span><span class="mi a">·</span>
+    <span class="mi">Sin complicaciones técnicas</span><span class="mi a">·</span>
+    <span class="mi">Madrid y toda España</span><span class="mi a">·</span>
+    <span class="mi">Presencia digital profesional</span><span class="mi a">·</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="sec sec-white">
+  <div class="sec-inner" style="padding-top:4rem;padding-bottom:4rem">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-big">10d</div>
+        <div class="stat-label">Entrega garantizada en 10 días hábiles</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-big">390€</div>
+        <div class="stat-label">Precio de inicio con SEO on-page incluido</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-big">0%</div>
+        <div class="stat-label">Comisión en hosting y dominio. Todo tuyo.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-big">24h</div>
+        <div class="stat-label">Respuesta máxima en días laborables</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="sec sec-bg">
+  <div class="sec-inner">
+    <div class="sec-deco">02</div>
+    <div class="sec-label"><span class="sl-line"></span><span class="sl-text">Servicios</span></div>
+    <h2 class="sec-title">¿Qué puedo<br>hacer por ti?</h2>
+    <div class="services-grid">
+      <div class="svc">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="svc-title">Diseño web a medida</div>
+        <div class="svc-desc">Webs profesionales para clínicas, despachos y negocios locales. Diseño personalizado, adaptado a tu sector y clientes.</div>
+        <a href="/demos" class="svc-link">Ver demos →</a>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="svc-title">SEO on-page incluido</div>
+        <div class="svc-desc">Optimización técnica desde el código para que Google te encuentre: velocidad, metaetiquetas, estructura y Core Web Vitals.</div>
+        <a href="/proceso" class="svc-link">Cómo lo hacemos →</a>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="svc-title">Landings de nicho</div>
+        <div class="svc-desc">Páginas para tu sector que atacan keywords de baja competencia. "Web para dentistas Madrid" en lugar de términos genéricos.</div>
+        <a href="/precios" class="svc-link">Ver planes →</a>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="svc-title">Analytics y medición</div>
+        <div class="svc-desc">Google Analytics 4 y Search Console configurados para que veas desde el primer día qué funciona y qué mejora.</div>
+        <a href="/precios" class="svc-link">Disponible desde Posicionar →</a>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="svc-title">Blog y contenidos</div>
+        <div class="svc-desc">Estructura de blog lista para publicar. Con el plan Crecer incluye el primer artículo ya escrito y optimizado para SEO.</div>
+        <a href="/precios" class="svc-link">Ver plan Crecer →</a>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="svc-title">Proyectos a medida</div>
+        <div class="svc-desc">Ecommerce, integraciones, portales o cualquier proyecto con requisitos específicos. Presupuesto cerrado antes de empezar.</div>
+        <a href="/contacto" class="svc-link">Cuéntame tu proyecto →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO RESUMEN -->
+<section class="sec sec-white">
+  <div class="sec-inner">
+    <div class="sec-deco">03</div>
+    <div class="proc-header">
+      <div>
+        <div class="sec-label"><span class="sl-line"></span><span class="sl-text">Proceso</span></div>
+        <h2 class="sec-title">10 días.<br><span class="g">Sin sorpresas.</span></h2>
+        <p class="sec-sub">Cada paso tiene fecha. Sabes qué pasa cuándo y qué necesitamos de ti.</p>
+      </div>
+      <a href="/proceso" class="sec-link">Ver el proceso completo →</a>
+    </div>
+    <div class="proc-steps">
+      <div class="paso">
+        <div class="paso-n">Paso 01</div>
+        <div class="paso-title">Brief</div>
+        <div class="paso-desc">Formulario de 10 min. Sin él no arrancamos.</div>
+        <span class="paso-time">Día 1</span>
+      </div>
+      <div class="paso">
+        <div class="paso-n">Paso 02</div>
+        <div class="paso-title">Diseño</div>
+        <div class="paso-desc">Propuesta visual para tu aprobación.</div>
+        <span class="paso-time">Días 2–3</span>
+      </div>
+      <div class="paso">
+        <div class="paso-n">Paso 03</div>
+        <div class="paso-title">Desarrollo + SEO</div>
+        <div class="paso-desc">Maquetación con SEO técnico incluido.</div>
+        <span class="paso-time">Días 4–8</span>
+      </div>
+      <div class="paso">
+        <div class="paso-n">Paso 04</div>
+        <div class="paso-title">Revisión</div>
+        <div class="paso-desc">2 rondas incluidas. 48h para responder.</div>
+        <span class="paso-time">Día 9</span>
+      </div>
+      <div class="paso">
+        <div class="paso-n">Paso 05</div>
+        <div class="paso-title">Publicación</div>
+        <div class="paso-desc">Online en tu dominio. Sin comisiones.</div>
+        <span class="paso-time">Día 10</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMOS RESUMEN -->
+<section class="sec sec-bg">
+  <div class="sec-inner">
+    <div class="sec-deco">04</div>
+    <div class="demos-header">
+      <div>
+        <div class="sec-label"><span class="sl-line"></span><span class="sl-text">Portfolio</span></div>
+        <h2 class="sec-title">Así queda<br><span class="g">tu web.</span></h2>
+      </div>
+      <a href="/demos" class="sec-link">Ver todos los sectores →</a>
+    </div>
+    <div class="demos-grid">
+      <div class="demo-card">
+        <span class="real-pin">✓ Real</span>
+        <img class="demo-img" src="https://drgutierrezbaiget.com/img/foto-doctor.webp" alt="Diseño web médico - Dr. Gutiérrez Baiget - HDM Web Design">
+        <div class="demo-overlay"></div>
+        <div class="demo-info">
+          <div class="di-sector">Medicina · Cirugía</div>
+          <div class="di-title">Dr. Gutiérrez Baiget</div>
+          <div class="di-links">
+            <a href="https://drgutierrezbaiget.com" target="_blank" rel="noopener" class="di-btn di-p">Ver web →</a>
+            <a href="/contacto" class="di-btn di-g">La quiero</a>
+          </div>
+        </div>
+      </div>
+      <div class="demo-card">
+        <img class="demo-img" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&q=80&auto=format" alt="Diseño web clínica dental">
+        <div class="demo-overlay"></div>
+        <div class="demo-info">
+          <div class="di-sector">Salud dental</div>
+          <div class="di-title">Clínica Dental</div>
+          <div class="di-links">
+            <a href="/demos/dentistas" class="di-btn di-p">Ver demo →</a>
+            <a href="/contacto" class="di-btn di-g">La quiero</a>
+          </div>
+        </div>
+      </div>
+      <div class="demo-card">
+        <img class="demo-img" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&q=80&auto=format" alt="Diseño web despacho abogados">
+        <div class="demo-overlay"></div>
+        <div class="demo-info">
+          <div class="di-sector">Servicios legales</div>
+          <div class="di-title">Despacho de Abogados</div>
+          <div class="di-links">
+            <a href="/demos/abogados" class="di-btn di-p">Ver demo →</a>
+            <a href="/contacto" class="di-btn di-g">La quiero</a>
+          </div>
+        </div>
+      </div>
+      <div class="demo-card">
+        <img class="demo-img" src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=700&q=80&auto=format" alt="Diseño web psicólogo terapeuta">
+        <div class="demo-overlay"></div>
+        <div class="demo-info">
+          <div class="di-sector">Psicología</div>
+          <div class="di-title">Psicólogo / Terapeuta</div>
+          <div class="di-links">
+            <a href="/demos/psicologos" class="di-btn di-p">Ver demo →</a>
+            <a href="/contacto" class="di-btn di-g">La quiero</a>
+          </div>
+        </div>
+      </div>
+      <div class="demo-card">
+        <img class="demo-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80&auto=format" alt="Diseño web restaurante hostelería">
+        <div class="demo-overlay"></div>
+        <div class="demo-info">
+          <div class="di-sector">Hostelería</div>
+          <div class="di-title">Restaurante</div>
+          <div class="di-links">
+            <a href="/demos/restaurantes" class="di-btn di-p">Ver demo →</a>
+            <a href="/contacto" class="di-btn di-g">La quiero</a>
+          </div>
+        </div>
+      </div>
+      <div class="demo-card">
+        <img class="demo-img" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80&auto=format" alt="Diseño web inmobiliaria">
+        <div class="demo-overlay"></div>
+        <div class="demo-info">
+          <div class="di-sector">Inmobiliario</div>
+          <div class="di-title">Inmobiliaria</div>
+          <div class="di-links">
+            <a href="/demos/inmobiliarias" class="di-btn di-p">Ver demo →</a>
+            <a href="/contacto" class="di-btn di-g">La quiero</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIOS RESUMEN -->
+<section class="sec sec-white">
+  <div class="sec-inner">
+    <div class="sec-deco">05</div>
+    <div class="precios-header">
+      <div>
+        <div class="sec-label"><span class="sl-line"></span><span class="sl-text">Precios</span></div>
+        <h2 class="sec-title">Sin letra<br><span class="g">pequeña.</span></h2>
+      </div>
+      <a href="/precios" class="sec-link">Ver todos los detalles →</a>
+    </div>
+    <div class="precios-grid">
+      <div class="plan">
+        <div class="plan-tag">Presencia básica</div>
+        <div class="plan-price lg">390€</div>
+        <div class="plan-period">pago único</div>
+        <div class="plan-name">Presencia</div>
+        <div class="plan-desc">3 páginas, SEO básico, responsive. Entrega en 7 días.</div>
+        <a href="/precios" class="plan-btn pb-grad">Ver detalles</a>
+      </div>
+      <div class="plan featured">
+        <div class="pop-pin">Más popular</div>
+        <div class="plan-tag">Para posicionar</div>
+        <div class="plan-price lg">590€</div>
+        <div class="plan-period">pago único</div>
+        <div class="plan-name">Posicionar</div>
+        <div class="plan-desc">5 páginas, landing de nicho, Analytics y Search Console.</div>
+        <a href="/precios" class="plan-btn pb-white">Ver detalles</a>
+      </div>
+      <div class="plan">
+        <div class="plan-tag">Para crecer</div>
+        <div class="plan-price lg">890€</div>
+        <div class="plan-period">pago único</div>
+        <div class="plan-name">Crecer</div>
+        <div class="plan-desc">3 landings de nicho, blog, Google Business Profile.</div>
+        <a href="/precios" class="plan-btn pb-grad">Ver detalles</a>
+      </div>
+      <div class="plan navy">
+        <div class="plan-tag">Sin límites</div>
+        <div class="plan-price md">A medida</div>
+        <div class="plan-period">presupuesto personalizado</div>
+        <div class="plan-name">A medida</div>
+        <div class="plan-desc">Ecommerce, integraciones, portales. Análisis previo gratuito.</div>
+        <a href="/contacto" class="plan-btn pb-navy">Cuéntame tu proyecto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-bg">
+  <div class="sec-inner">
+    <div class="sec-deco">06</div>
+    <div class="faq-header">
+      <div>
+        <div class="sec-label"><span class="sl-line"></span><span class="sl-text">FAQ</span></div>
+        <h2 class="sec-title">Preguntas<br><span class="g">frecuentes.</span></h2>
+      </div>
+      <a href="/faq" class="sec-link">Ver todas las preguntas →</a>
+    </div>
+    <div class="faq-list">
+      <div class="fq">
+        <div class="fq-q">¿El SEO on-page garantiza posiciones en Google?</div>
+        <div class="fq-a">No. El SEO on-page es la base técnica: estructura, velocidad, metaetiquetas. <strong>Las posiciones dependen de la competencia y del tiempo.</strong> Lo que hacemos es que tu web arranque correctamente preparada para posicionar desde el primer día.</div>
+      </div>
+      <div class="fq">
+        <div class="fq-q">¿Cuánto cuesta una página web profesional con SEO incluido?</div>
+        <div class="fq-a">Desde <strong>390€ pago único</strong> con SEO on-page incluido. El plan Posicionar cuesta 590€ e incluye 5 páginas, landing de nicho y Analytics. El plan Crecer cuesta 890€ con blog y Google Business Profile. <a href="/precios">Ver todos los planes →</a></div>
+      </div>
+      <div class="fq">
+        <div class="fq-q">¿En cuánto tiempo se entrega una página web profesional?</div>
+        <div class="fq-a">En <strong>10 días hábiles</strong> desde la aprobación del brief y el diseño. Si nos retrasamos sin causa tuya, devolvemos el 20% del importe. <a href="/proceso">Ver el proceso completo →</a></div>
+      </div>
+      <div class="fq">
+        <div class="fq-q">¿Quién paga el hosting y el dominio?</div>
+        <div class="fq-a">Tú, directamente al proveedor. El hosting suele costar entre 5 y 15€/mes. <strong>No cobramos comisión ni intermediamos.</strong> La web y los accesos son 100% tuyos desde el día 1.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <div class="cta-wrap">
+    <h2>¿Digitalizamos tu<br><span class="g">negocio?</span></h2>
+    <p class="cta-sub">Sin compromiso. Presupuesto cerrado en menos de 24 horas.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/34657388893?text=Hola%2C%20me%20interesa%20una%20web%20para%20mi%20negocio" class="btn-wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp · +34 657 388 893
+      </a>
+      <a href="mailto:hdmdisenoweb@gmail.com" class="btn-em">hdmdisenoweb@gmail.com →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">HDM Web Design</div>
+  <div class="fl">
+    <a href="/demos">Demos</a>
+    <a href="/proceso">Proceso</a>
+    <a href="/precios">Precios</a>
+    <a href="/blog">Blog</a>
+    <a href="/sobre-mi">Sobre mí</a>
+    <a href="/contacto">Contacto</a>
+    <a href="/politica-privacidad">Privacidad</a>
+  </div>
+  <span class="fc">© 2026 HDM Web Design · Madrid</span>
+</footer>
+
+</body>
+</html>

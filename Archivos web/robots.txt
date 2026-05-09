@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Bloquear páginas sin valor SEO
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /?s=
+Disallow: /search
+
+# Sitemap
+Sitemap: https://guillehdm.es/sitemap.xml
