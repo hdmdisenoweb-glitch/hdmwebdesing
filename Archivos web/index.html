@@ -237,7 +237,22 @@ h1{font-size:clamp(2.4rem,4.5vw,4rem);font-weight:800;line-height:1.08;color:var
 
 /* ── PRECIOS ── */
 .precios-header{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end;margin-bottom:3rem}
-.precios-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.875rem}
+.precios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.875rem;margin-bottom:0.875rem}
+.plan-medida{background:var(--navy);border-radius:16px;padding:2rem 2.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.pm-left{}
+.pm-tag{font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.5rem}
+.pm-title{font-size:1.75rem;font-weight:800;color:#fff;margin-bottom:0.4rem;letter-spacing:-0.02em}
+.pm-desc{font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.6;max-width:580px}
+.pm-right{display:flex;flex-direction:column;gap:0.75rem;align-items:flex-end;flex-shrink:0}
+.pm-btn{background:var(--grad);color:#fff;padding:0.875rem 2rem;border-radius:30px;font-size:0.875rem;font-weight:700;white-space:nowrap;transition:opacity 0.15s}
+.pm-btn:hover{opacity:0.9}
+.pm-sub{font-size:0.78rem;color:rgba(255,255,255,0.35);text-align:right}
+@media(max-width:900px){
+  .precios-grid{grid-template-columns:1fr}
+  .plan-medida{grid-template-columns:1fr;gap:1.5rem}
+  .pm-right{align-items:flex-start}
+  .pm-sub{text-align:left}
+}
 .plan{padding:2rem 1.75rem;background:var(--white);border-radius:16px;border:1px solid var(--border);display:flex;flex-direction:column;transition:all 0.2s;position:relative}
 .plan:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(11,16,32,0.07)}
 .plan.featured{background:var(--grad);border:none;box-shadow:0 8px 32px rgba(79,70,229,0.28)}
@@ -769,24 +784,21 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()}
         </ul>
         <a href="/precios" class="plan-btn pb-grad">Ver detalles</a>
       </div>
-      <div class="plan navy">
-        <div class="plan-tag">Sin límites</div>
-        <div class="plan-price md">A medida</div>
-        <div class="plan-period">presupuesto personalizado</div>
-        <div class="plan-name">A medida</div>
-        <div class="plan-desc">Ecommerce, integraciones, portales o cualquier proyecto con requisitos específicos.</div>
-        <ul class="plan-feats" style="list-style:none;display:flex;flex-direction:column;gap:0.55rem;margin-bottom:1.5rem;flex:1">
-          <li style="display:flex;gap:7px;align-items:flex-start;font-size:0.78rem;color:rgba(255,255,255,0.75)"><span style="font-weight:700;font-size:0.7rem;margin-top:2px;flex-shrink:0;color:#818cf8">✓</span>Análisis previo gratuito</li>
-          <li style="display:flex;gap:7px;align-items:flex-start;font-size:0.78rem;color:rgba(255,255,255,0.75)"><span style="font-weight:700;font-size:0.7rem;margin-top:2px;flex-shrink:0;color:#818cf8">✓</span>Presupuesto cerrado antes de empezar</li>
-          <li style="display:flex;gap:7px;align-items:flex-start;font-size:0.78rem;color:rgba(255,255,255,0.75)"><span style="font-weight:700;font-size:0.7rem;margin-top:2px;flex-shrink:0;color:#818cf8">✓</span>Cualquier tecnología</li>
-          <li style="display:flex;gap:7px;align-items:flex-start;font-size:0.78rem;color:rgba(255,255,255,0.75)"><span style="font-weight:700;font-size:0.7rem;margin-top:2px;flex-shrink:0;color:#818cf8">✓</span>Plazos y entregables definidos</li>
-        </ul>
-        <a href="/contacto" class="plan-btn pb-navy">Cuéntame tu proyecto</a>
+    </div>
+    <!-- A MEDIDA — bloque ancho -->
+    <div class="plan-medida">
+      <div class="pm-left">
+        <div class="pm-tag">Proyectos complejos · Sin límites</div>
+        <div class="pm-title">¿Tu proyecto necesita algo más?</div>
+        <div class="pm-desc">Ecommerce, integraciones, portales de cliente, multidioma o cualquier funcionalidad específica. Analizamos tu proyecto sin compromiso y te damos un presupuesto cerrado antes de empezar.</div>
+      </div>
+      <div class="pm-right">
+        <a href="/contacto" class="pm-btn">Cuéntame tu proyecto →</a>
+        <span class="pm-sub">Análisis previo gratuito · Sin compromiso</span>
       </div>
     </div>
   </div>
 </section>
-<!-- FAQ<!-- FAQ -->
 <section class="sec sec-bg">
   <div class="sec-inner">
     <div class="sec-deco">06</div>
