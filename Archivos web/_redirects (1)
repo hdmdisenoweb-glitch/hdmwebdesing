@@ -1,0 +1,2 @@
+/servicios/* /Servicios/:splat 301
+/blog/* /Blog/:splat 301
