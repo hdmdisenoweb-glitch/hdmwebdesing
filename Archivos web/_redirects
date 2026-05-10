@@ -1,8 +1,0 @@
-/servicios/* /Servicios/:splat 301
-/blog/* /Blog/:splat 301
-/demos /demos.html 200
-/precios /precios.html 200
-/contacto /contacto.html 200
-/sobre-mi /sobre-mi.html 200
-/proceso /proceso.html 200
-/faq /faq.html 200
